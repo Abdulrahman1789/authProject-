@@ -7,7 +7,7 @@ import { env } from "./config/env";
 import { callbackify } from "node:util";
 import { get } from "node:http";
 import { AppError } from "./utils/index";
-import { globalErrorHandler } from "./middlewares/index";
+import { globalErrorHandler } from "./middlewares/auth";
 
 import { authRouter } from "./modules/auth/auth.route";
 // import { userRouter } from "./modules/user/user.routes";
