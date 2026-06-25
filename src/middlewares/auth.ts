@@ -51,3 +51,16 @@ export const auth = (
         next(new AppError("Unauthorized Access", 401));
     }
 };
+
+export const authorized = (...roles: string[]) => {
+    return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+        if (!req.user) {
+           return next(new AppError("Unauthorized Access", 401));
+        }
+        if (!roles.includes(req.user.role)) {
+            return next(new AppError("Forbidden Access", 403));
+        }
+        next();
+    };
+};
+

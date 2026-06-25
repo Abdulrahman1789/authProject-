@@ -20,7 +20,9 @@ const register = async (payload: any) => {
     );
 
     payload.password = hashedPassword;
-
+    
+    payload.role = "employee";
+    
     const result = await User.create(payload);
 
     return result;
