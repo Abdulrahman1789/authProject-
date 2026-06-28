@@ -1,8 +1,6 @@
-
 import { app } from "./app";
 import { env } from "./config/env";
-import { connectDB } from "./config/database"
-
+import { connectDB } from "./config/database";
 
 const startServer = async () => {
     try {
