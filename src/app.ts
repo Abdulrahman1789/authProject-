@@ -11,6 +11,7 @@ import { globalErrorHandler } from "./middlewares/auth";
 
 import { authRouter } from "./modules/auth/auth.route";
 import { userRouter } from "./modules/users/user.route";
+import { departmentRouter } from "./modules/department/department.route";
 // import { messageRouter } from "./modules/message/message.routes";
 // import { excelRouter } from "./modules/excel/excel.routes";
 
@@ -37,6 +38,7 @@ app.use(morgan("dev"));
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/department", departmentRouter);
 // app.use("/api/v1/messages", messageRouter);
 // app.use("/api/v1/excel", excelRouter);
 
