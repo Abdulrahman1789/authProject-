@@ -14,6 +14,7 @@ import { userRouter } from "./modules/users/user.route";
 import { departmentRouter } from "./modules/department/department.route";
 // import { messageRouter } from "./modules/message/message.routes";
 import { excelRouter } from "./modules/excel/excel.route";
+import { employeeRouter } from "./modules/employees/employee.route";
 
 export const app = express();
 
@@ -41,6 +42,7 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/department", departmentRouter);
 // app.use("/api/v1/messages", messageRouter);
 app.use("/api/v1/excel", excelRouter);
+app.use("/api/v1/employee", employeeRouter);
 
 
 app.all("/{*splate}", (req, _res, next) => {
